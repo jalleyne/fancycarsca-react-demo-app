@@ -65,3 +65,9 @@ dist/
 
 # github personal access token for releases/ api access
 github.conf*
+
+# webpack stats file
+webpack.stats.json
+
+# node releases
+releases/

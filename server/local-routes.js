@@ -12,6 +12,7 @@ function localRoutes() {
           path: './dist',
           redirectToSlash: true,
           index: true,
+          lookupCompressed: true,
         },
       },
     },

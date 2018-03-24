@@ -1,25 +1,19 @@
 {
   "name": "fancycarsca-react-demo-app",
   "version": "1.0.0",
-  "description":
-    "Facnycars.ca Homepage frontend application, built on React and Hapi.",
+  "description": "Facnycars.ca Homepage frontend application, built on React and Hapi.",
   "main": "server/index.js",
   "scripts": {
     "start": "NODE_ENV=production node ./server/index.js",
-    "dev":
-      "sh -c \"npm run build:watch &\"; sleep 0.5 && sh -c \"npm run dev:server\";",
+    "dev": "sh -c \"npm run build:watch &\"; sleep 0.5 && sh -c \"npm run dev:server\";",
     "dev:server": "./node_modules/.bin/nodemon --delay 100ms ./server/index.js",
-    "dev:react":
-      "./node_modules/.bin/webpack-dev-server --color --inline --hot --open --config webpack.dev.js --mode development",
-    "build":
-      "./node_modules/.bin/webpack --mode production --config webpack.prod.js",
-    "build:watch":
-      "./node_modules/.bin/webpack --watch --mode development --config webpack.dev.js",
+    "dev:react": "./node_modules/.bin/webpack-dev-server --color --inline --hot --open --config webpack.dev.js --mode development",
+    "build": "./node_modules/.bin/webpack --mode production --config webpack.prod.js",
+    "build:watch": "./node_modules/.bin/webpack --watch --mode development --config webpack.dev.js",
     "lint": "./node_modules/.bin/eslint ./src/**/*.js",
-    "package":
-      "mkdir -p ./releases && release=$(npm pack) && mv $release ./releases/",
-    "release":
-      "curl -v https://api.github.com/repos/jalleyne/fancycarsca-react-demo-app/releases -d @release.json --header \"Content-Type: application/json\" --header \"Authorization: $(source ./github.conf && echo $token)\""
+    "package": "mkdir -p ./releases && release=$(npm pack) && mv $release ./releases/",
+    "release": "curl -v https://api.github.com/repos/jalleyne/fancycarsca-react-demo-app/releases -d @release.json --header \"Content-Type: application/json\" --header \"Authorization: $(source ./github.conf && echo $token)\"",
+    "stats": "./node_modules/.bin/webpack --mode production --config webpack.prod.js --json > webpack.stats.json"
   },
   "engineStrict": true,
   "engines": {
@@ -38,6 +32,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "compression-webpack-plugin": "^1.1.11",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
