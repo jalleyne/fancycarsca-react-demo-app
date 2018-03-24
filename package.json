@@ -15,7 +15,9 @@
       "./node_modules/.bin/webpack --mode production --config webpack.prod.js",
     "build:watch":
       "./node_modules/.bin/webpack --watch --mode development --config webpack.dev.js",
-    "lint": "./node_modules/.bin/eslint ./src/**/*.js"
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js",
+    "release":
+      "curl -vX POST https://api.github.com/repos/jalleyne/fancycarsca-react-demo-app/releases/1 -d @release.json"
   },
   "engineStrict": true,
   "engines": {

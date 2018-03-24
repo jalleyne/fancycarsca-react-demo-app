@@ -15,7 +15,7 @@ High level development dependencies:
 To setup and run the application follow the steps below, once the
 
 ```bash
-$ git clone jalleyne/walmarttest_fancycarsca_homepage.git
+$ git clone jalleyne/fancycarsca-react-demo-app.git
 $ nvm use
 $ yarn install # install with yarn
 $ npm i # install with npm
