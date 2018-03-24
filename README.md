@@ -57,3 +57,7 @@ Package up the bundle into a tarball for download.
 ```bash
 $ npm run package # outputs tarball in `./releases/` directory
 ```
+
+## License
+
+[MIT](./LICENSE.md)
