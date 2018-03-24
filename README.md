@@ -6,9 +6,9 @@ React.js application used as the homepage on fancycars.ca website.
 
 High level development dependencies:
 
-* Node Version Manager
-* Nodejs
-* React
+* [Node Version Manager](https://github.com/creationix/nvm)
+* [Nodejs](https://www.nodejs.org)
+* [React](https://reactjs.org)
 
 ## Setup
 
@@ -17,7 +17,7 @@ To setup and run the application follow the steps below, once the
 ```bash
 $ git clone jalleyne/fancycarsca-react-demo-app.git
 $ nvm use
-$ yarn install # install with yarn
+$ yarn install # install with yarn OR
 $ npm i # install with npm
 ```
 
