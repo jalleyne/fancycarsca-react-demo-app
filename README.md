@@ -49,3 +49,11 @@ Production build and deployment steps.
 $ npm run build # outputs production build to ./dist folder
 $ npm start # starts up a Hapi server instance to server static files and act as a backend for frontend react code.
 ```
+
+## Package
+
+Package up the bundle into a tarball for download.
+
+```bash
+$ npm run package # outputs tarball in `./releases/` directory
+```

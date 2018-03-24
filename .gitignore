@@ -62,3 +62,6 @@ typings/
 
 # build artifacts directory
 dist/
+
+# github personal access token for releases/ api access
+github.conf*
