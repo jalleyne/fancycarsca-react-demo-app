@@ -1,0 +1,53 @@
+{
+  "name": "walmarttest_fancycarsca_homepage",
+  "version": "1.0.0",
+  "description":
+    "Facnycars.ca Homepage frontend application, built on React.js.",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./server/index.js",
+    "dev":
+      "./node_modules/.bin/webpack-dev-server --color --inline --hot --open --config webpack.dev.js --mode development",
+    "build":
+      "./node_modules/.bin/webpack --mode production --config webpack.prod.js",
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js",
+    "test:watch": "jest --watch --coverage",
+    "test": "jest --coverage"
+  },
+  "author": "Jovan Alleyne <jovan.alleyne@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "prettier": "^1.11.1",
+    "prettier-eslint": "^8.8.1",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "hapi": "^17.2.3",
+    "lodash": "^4.17.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "notes.base": "./.notes/",
+  "notes.defaultExtension": ".md",
+  "prettier.eslintIntegration": true,
+  "eslint.packageManager": "yarn"
+}

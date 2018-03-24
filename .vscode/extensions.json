@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dzannotti.vscode-babel-coloring",
+    "joelday.docthis",
+    "dweizhe.docthis-customize-tags",
+    "dbaeumer.vscode-eslint",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense"
+  ]
+}
