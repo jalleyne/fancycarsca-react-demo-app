@@ -15,6 +15,10 @@ module.exports = merge(common, {
     },
     progress: true,
     stats: { colors: true },
+    proxy: {
+      // proxy URLs to backend development server
+      '/api': 'http://localhost:8000',
+    },
   },
   // performance: {
   //   hints: 'warning', // enum

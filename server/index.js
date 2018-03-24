@@ -1,21 +1,45 @@
-const Hapi = require('hapi');
+// mock responses until the services get created.
+require('./__route-mocks');
 
-// Create a server with a host and port
-const server = Hapi.server({
-  host: process.env.interface || 'localhost',
-  port: process.env.PORT || 8000,
-});
+//
+const path = require('path');
 
-// Start the server
-async function start() {
-  try {
-    await server.start();
-  } catch (err) {
-    console.log(err);
-    process.exit(1);
-  }
+//
+const ApplicationServer = require('./server');
 
-  console.log('Http server running at:', server.info.uri);
-}
+const proxyRoutes = require('./proxy-routes');
+const localRoutes = require('./local-routes');
 
-start();
+/**
+ * @description
+ * @export
+ * @class ApplicationServer
+ */
+module.exports =
+  /**
+   * @description
+   * @export
+   */
+  (async function main() {
+    // Create a server with a host and port
+    const server = new ApplicationServer({});
+
+    // Configure logging
+    await server.register([
+      require('inert'),
+      {
+        plugin: require('hapi-pino'),
+        options: {
+          prettyPrint: true,
+          logEvents: ['response'],
+        },
+      },
+    ]);
+
+    // Setup routes
+    server.route(localRoutes());
+    server.route(proxyRoutes());
+
+    // Start the server
+    await server.connect();
+  })();

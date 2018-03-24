@@ -1,29 +1,40 @@
 {
-  "name": "walmarttest_fancycarsca_homepage",
+  "name": "fancycarsca_homepage",
   "version": "1.0.0",
   "description":
-    "Facnycars.ca Homepage frontend application, built on React.js.",
-  "main": "index.js",
+    "Facnycars.ca Homepage frontend application, built on React and Hapi.",
+  "main": "server/index.js",
   "scripts": {
     "start": "NODE_ENV=production node ./server/index.js",
     "dev":
+      "sh -c \"npm run build:watch &\"; sleep 0.5 && sh -c \"npm run dev:server\";",
+    "dev:server": "./node_modules/.bin/nodemon --delay 100ms ./server/index.js",
+    "dev:react":
       "./node_modules/.bin/webpack-dev-server --color --inline --hot --open --config webpack.dev.js --mode development",
     "build":
       "./node_modules/.bin/webpack --mode production --config webpack.prod.js",
-    "lint": "./node_modules/.bin/eslint ./src/**/*.js",
-    "test:watch": "jest --watch --coverage",
-    "test": "jest --coverage"
+    "build:watch":
+      "./node_modules/.bin/webpack --watch --mode development --config webpack.dev.js",
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=8.9.x",
+    "npm": ">=5.5.x"
   },
   "author": "Jovan Alleyne <jovan.alleyne@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^16.0.40",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
     "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-loader": "^2.0.0",
@@ -32,10 +43,16 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.1.0",
+    "node-sass": "^4.8.3",
+    "nodemon": "^1.17.2",
     "prettier": "^1.11.1",
     "prettier-eslint": "^8.8.1",
+    "prop-types": "^15.6.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
     "url-loader": "^1.0.1",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
@@ -43,11 +60,30 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "boom": "^7.2.0",
+    "chalk": "^2.3.2",
+    "chance": "^1.0.13",
+    "debug": "^3.1.0",
+    "fetch-defaults": "^1.0.0",
+    "grommet": "^1.10.1",
+    "grommet-addons": "^0.6.0",
     "hapi": "^17.2.3",
+    "hapi-pino": "^4.0.3",
+    "immutable": "^3.8.2",
+    "inert": "^5.1.0",
     "lodash": "^4.17.5",
+    "mockery": "^2.1.0",
+    "node-fetch": "^2.1.1",
+    "path-match": "^1.2.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "react-with-async-state": "^1.0.1",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.3.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "route-parser": "^0.0.5",
+    "whatwg-fetch": "^2.0.3"
   }
 }
