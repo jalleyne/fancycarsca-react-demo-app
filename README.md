@@ -2,6 +2,24 @@
 
 React.js application used as the homepage on fancycars.ca website.
 
+## Features:
+
+* Webpack asset build
+* React components
+* Grommet UI library
+* Hapi
+* HMR
+* Prettier
+* ESLint
+* VSCode Config
+* Babel
+
+## Next Release
+
+* Server-side rendering
+* Remove Grommet UI
+* Component examples with CSS-in-JS
+
 ## Dependencies
 
 High level development dependencies:
